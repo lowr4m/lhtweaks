@@ -8,7 +8,7 @@ This module optimize SQLite, GMS, memory, build.prop and SF parameters to improv
 - please don't use other modules containing GMS Tweaker, SQLite tweaker or other performance modules.
 - this module is for smoothness, battery and performance, not for ultra performance. If you want more 30fps, buy a new phone.
 - Our Telegram group: https://t.me/LHProject
-- 
+
 # Changelogs
 ==== v1.2.5
 - Scripts now is more clean and apply faster;
