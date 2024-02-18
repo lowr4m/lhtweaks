@@ -15,6 +15,7 @@ CHANGELOGS:
 - Can be update directly from 1.2.5;
 - Just some adjustments in memory management;
 - Timer migration is disabled again;
+- Re-enabled perfd
 - SQLite updated to latest version.
 
 === LHMods 1.2.5
