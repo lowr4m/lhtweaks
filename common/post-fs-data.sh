@@ -78,7 +78,7 @@ pm disable com.google.android.gsf/.update.SystemUpdatePanoActivity
 pm disable com.google.android.gsf/.update.SystemUpdateService 
 pm disable com.google.android.gsf/.update.SystemUpdateService
 pm disable com.google.android.gsf/.update.SystemUpdateService
-pm disable --user 0 com.google.android.gms/.phenotype.service.sync.PhenotypeConfigurator;
+pm disable --user 0 com.google.android.gms/.phenotype.service.sync.PhenotypeConfigurator
 
 # DISABLE XIAOMI PROGRAM DEBUGGING
 resetprop sys.miui.ndcd off
