@@ -63,13 +63,9 @@ done
 #==========
 
     echo '0 0 0 0' > $KE/printk
-    chmod 644 $KL/printk_mode/printk_mode
     echo '0' > $KL/printk_mode/printk_mode
-    chmod 644 $MD/printk/parameters/ignore_loglevel
     echo 'Y' > $MD/printk/parameters/ignore_loglevel
-    chmod 644 $MD/printk/parameters/pid
 	echo 'N' $MD/printk/parameters/pid
-	chmod 644 $MD/printk/parameters/time
 	echo 'N' > $MD/printk/parameters/time
 	echo 'off' > $KE/printk_devkmsg
 
@@ -90,33 +86,39 @@ done
 
 	echo '0' > $BL/sda/queue/iostats
 	echo '0' > $BL/sda/queue/rq_affinity
-	echo '128' > $BL/sda/queue/read_ahead_kb
-	echo '128' > $BL/sda/queue/nr_requests
+	echo '2' > $BL/sda/queue/nomerges
+	echo '512' > $BL/sda/queue/read_ahead_kb
+	echo '256' > $BL/sda/queue/nr_requests
 	
 	echo '0' > $BL/sdb/queue/iostats
 	echo '0' > $BL/sdb/queue/rq_affinity
-	echo '128' > $BL/sdb/queue/read_ahead_kb
-	echo '128' > $BL/sdb/queue/nr_requests
+	echo '2' > $BL/sdb/queue/nomerges
+	echo '512' > $BL/sdb/queue/read_ahead_kb
+	echo '256' > $BL/sdb/queue/nr_requests
 
 	echo '0' > $BL/sdc/queue/iostats
 	echo '0' > $BL/sdc/queue/rq_affinity
-	echo '128' > $BL/sdc/queue/read_ahead_kb
-	echo '128' > $BL/sdc/queue/nr_requests
+	echo '2' > $BL/sdc/queue/nomerges
+	echo '512' > $BL/sdc/queue/read_ahead_kb
+	echo '256' > $BL/sdc/queue/nr_requests
 
 	echo '0' > $BL/sdd/queue/iostats
 	echo '0' > $BL/sdd/queue/rq_affinity
-	echo '128' > $BL/sdd/queue/read_ahead_kb
-	echo '128' > $BL/sdd/queue/nr_requests
+	echo '2' > $BL/sdd/queue/nomerges
+	echo '512' > $BL/sdd/queue/read_ahead_kb
+	echo '256' > $BL/sdd/queue/nr_requests
 
 	echo '0' > $BL/sde/queue/iostats
 	echo '0' > $BL/sde/queue/rq_affinity
-	echo '128' > $BL/sde/queue/read_ahead_kb
-	echo '128' > $BL/sde/queue/nr_requests
-	
+	echo '2' > $BL/sde/queue/nomerges
+	echo '512' > $BL/sde/queue/read_ahead_kb
+	echo '256' > $BL/sde/queue/nr_requests
+
 	echo '0' > $BL/sdf/queue/iostats
 	echo '0' > $BL/sdf/queue/rq_affinity
-	echo '128' $BL/sdf/queue/read_ahead_kb
-	echo '128' $BL/sdf/queue/nr_requests
+    echo '2' > $BL/sdf/queue/nomerges
+	echo '512' $BL/sdf/queue/read_ahead_kb
+	echo '256' $BL/sdf/queue/nr_requests
 
 #==========
 # Adreno Tweaks for battery life
@@ -143,7 +145,6 @@ done
 # Power Saving Workqueues
 #==========
 
-	chmod 644 $MD/workqueue/parameters/power_efficient
 	echo 'Y' > $MD/workqueue/parameters/power_efficient
 
 #==========
