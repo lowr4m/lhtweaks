@@ -1,4 +1,4 @@
-# Don't modify anything after this
+# Don't modify anything after this 
 [[ -f "$INFO" ]] && {
   while read LINE; do
     if [[ "$(echo -n "$LINE" | tail -c 1)" == "~" ]]; then
