@@ -71,7 +71,7 @@ percentage=$(cat /sys/class/power_supply/battery/capacity)
 memTotal=$(free -m | awk '/^Mem:/{print $2}')
 rom=$(getprop ro.build.display.id)
 romversion=$(getprop ro.vendor.build.version.incremental)
-version="1.2.5"
+version="1.3"
 
 ui_print ""
 ui_print "----------------------------------"
@@ -96,7 +96,7 @@ sleep 0.1
 ui_print " --> Magisk: $magisk"
 sleep 0.1
 ui_print " "
-ui_print " --> Version tweaks: $version"
+ui_print " --> Version: $version"
 ui_print "----------------------------------"
 ui_print ""
 
