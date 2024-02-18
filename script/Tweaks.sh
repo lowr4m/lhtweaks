@@ -10,7 +10,6 @@ KG=/sys/class/kgsl/kgsl-3d0
 VM=/proc/sys/vm
 ST=/dev/cpuset
 MG=/sys/kernel/mm/lru_gen
-QU=/sys/block/*/queue
 
 #==========
 # Kernel Panic
@@ -84,11 +83,13 @@ done
 # I/O
 #==========
 
-	echo '0' > $QU/iostats
-	echo '0' > $QU/rq_affinity
-	echo '2' > $QU/nomerges
-	echo '512' > $QU/read_ahead_kb
-	echo '256' > $QU/nr_requests
+for queue in /sys/block/*/queue
+	echo '0' > ${queue}/iostats
+	echo '0' > ${queue}/rq_affinity
+	echo '2' > ${queue}/nomerges
+	echo '512' > ${queue}/read_ahead_kb
+	echo '256' > ${queue}/nr_requests
+done
 
 #==========
 # Adreno Tweaks for battery life
