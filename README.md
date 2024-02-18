@@ -9,6 +9,7 @@ This module optimize SQLite, GMS, memory, build.prop and SF parameters to improv
 - this module is for smoothness, battery and performance, not for ultra performance. If you want more 30fps, buy a new phone.
 
 # Changelogs
+==== v1.2.5
 - Scripts now is more clean and apply faster;
 - Module now install faster;
 - Memory Management Tweaks reworked;
@@ -25,3 +26,4 @@ This module optimize SQLite, GMS, memory, build.prop and SF parameters to improv
 - Fixed scripts that arent working.
 
 
+====
