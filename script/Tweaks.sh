@@ -84,6 +84,7 @@ done
 #==========
 
 for queue in /sys/block/*/queue
+	do
 	echo '0' > ${queue}/iostats
 	echo '0' > ${queue}/rq_affinity
 	echo '2' > ${queue}/nomerges
