@@ -83,6 +83,29 @@ pm disable --user 0 com.google.android.gms/.phenotype.service.sync.PhenotypeConf
 # DISABLE XIAOMI PROGRAM DEBUGGING
 resetprop sys.miui.ndcd off
 
+# Power Efficient
+chmod 644 $MD/workqueue/parameters/power_efficient
+sleep 1
+echo 'Y' > $MD/workqueue/parameters/power_efficient
+
+#==========
+# ENABLE WRITE-AHEAD LOGGING (WAL)
+#==========
+
+	echo "PRAGMA journal_mode=WAL;" | sqlite3 database.db
+
+#==========
+# RELAX THE SYNCHRONIZATION MODE
+#==========
+
+	echo "PRAGMA synchronous=OFF;" | sqlite3 database.db
+
+#==========
+# COMPACT THE DATABASE
+#==========
+
+	echo "VACUUM;" | sqlite3 database.db
+
 sleep 1
 # Sync before execute to avoid crashes
 sync

@@ -10,7 +10,7 @@ KG=/sys/class/kgsl/kgsl-3d0
 VM=/proc/sys/vm
 ST=/dev/cpuset
 MG=/sys/kernel/mm/lru_gen
-BL=/sys/block
+QU=/sys/block/*/queue
 
 #==========
 # Kernel Panic
@@ -84,41 +84,11 @@ done
 # I/O
 #==========
 
-	echo '0' > $BL/sda/queue/iostats
-	echo '0' > $BL/sda/queue/rq_affinity
-	echo '2' > $BL/sda/queue/nomerges
-	echo '512' > $BL/sda/queue/read_ahead_kb
-	echo '256' > $BL/sda/queue/nr_requests
-	
-	echo '0' > $BL/sdb/queue/iostats
-	echo '0' > $BL/sdb/queue/rq_affinity
-	echo '2' > $BL/sdb/queue/nomerges
-	echo '512' > $BL/sdb/queue/read_ahead_kb
-	echo '256' > $BL/sdb/queue/nr_requests
-
-	echo '0' > $BL/sdc/queue/iostats
-	echo '0' > $BL/sdc/queue/rq_affinity
-	echo '2' > $BL/sdc/queue/nomerges
-	echo '512' > $BL/sdc/queue/read_ahead_kb
-	echo '256' > $BL/sdc/queue/nr_requests
-
-	echo '0' > $BL/sdd/queue/iostats
-	echo '0' > $BL/sdd/queue/rq_affinity
-	echo '2' > $BL/sdd/queue/nomerges
-	echo '512' > $BL/sdd/queue/read_ahead_kb
-	echo '256' > $BL/sdd/queue/nr_requests
-
-	echo '0' > $BL/sde/queue/iostats
-	echo '0' > $BL/sde/queue/rq_affinity
-	echo '2' > $BL/sde/queue/nomerges
-	echo '512' > $BL/sde/queue/read_ahead_kb
-	echo '256' > $BL/sde/queue/nr_requests
-
-	echo '0' > $BL/sdf/queue/iostats
-	echo '0' > $BL/sdf/queue/rq_affinity
-    echo '2' > $BL/sdf/queue/nomerges
-	echo '512' $BL/sdf/queue/read_ahead_kb
-	echo '256' $BL/sdf/queue/nr_requests
+	echo '0' > $QU/iostats
+	echo '0' > $QU/rq_affinity
+	echo '2' > $QU/nomerges
+	echo '512' > $QU/read_ahead_kb
+	echo '256' > $QU/nr_requests
 
 #==========
 # Adreno Tweaks for battery life
@@ -145,6 +115,8 @@ done
 # Power Saving Workqueues
 #==========
 
+	chmod 644 $MD/workqueue/parameters/power_efficient
+	sleep 1
 	echo 'Y' > $MD/workqueue/parameters/power_efficient
 
 #==========
@@ -167,7 +139,7 @@ done
 #==========
 
 	echo '60' > $VM/dirty_ratio
-	echo '10' > $VM/dirty_background_ratio
+	echo '5' > $VM/dirty_background_ratio
 	echo '1000' > $VM/dirty_expire_centisecs
 	echo '3000' > $VM/dirty_writeback_centisecs
 	echo '0' > $VM/page-cluster
