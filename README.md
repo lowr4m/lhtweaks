@@ -26,4 +26,3 @@ This module optimize SQLite, GMS, memory, build.prop and SF parameters to improv
 - Fixed scripts that arent working.
 
 
-====
