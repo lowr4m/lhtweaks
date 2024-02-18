@@ -63,7 +63,7 @@ done
 # System Log
 #==========
 
-su -c "pm disable com.android.traceur"
+pm disable com.android.traceur
 
 #==========
 # Printk (thx to KNTD-reborn)
@@ -188,27 +188,27 @@ fi
 # ENABLE WRITE-AHEAD LOGGING (WAL)
 #==========
 
-	echo "PRAGMA journal_mode=WAL;" | sqlite3 database.db
+echo "PRAGMA journal_mode=WAL;" | sqlite3 database.db
 
 #==========
 # RELAX THE SYNCHRONIZATION MODE
 #==========
 
-	echo "PRAGMA synchronous=OFF;" | sqlite3 database.db
+echo "PRAGMA synchronous=OFF;" | sqlite3 database.db
 
 #==========
 # COMPACT THE DATABASE
 #==========
 
-	echo "VACUUM;" | sqlite3 database.db
+echo "VACUUM;" | sqlite3 database.db
 
 #==========
 # Stop Xiaomi perf service
 #==========
 
-	stop vendor.perfservice
-	stop miuibooster
-	stop vendor.miperf
+stop vendor.perfservice
+stop miuibooster
+stop vendor.miperf
 	
 #==========
 
