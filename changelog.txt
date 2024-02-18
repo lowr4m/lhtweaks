@@ -1,0 +1,55 @@
+LHMods v1.0
+
+             ------[ WARNING ]-------
+ ===================
+ - if you are using some GMS tweaker module or SQLite,
+please remove it, to avoid problems. Its recommended
+to NOT use much performance modules
+====================
+
+CHANGELOGS:
+
+=== LHMods 1.2.5
+- Scripts now is more clean and apply faster;
+- Module now install faster;
+- Memory Management Tweaks reworked;
+- Dalvik VM Tweaks removed. Doesnt make sense;
+- Build prop tweaks reworked;
+- Tracing Disabled;
+- Disabled scheduler stats and logs;
+- Multi-gen LRU Tweaked (if kernel supports);
+- Attempts to reduce CPU usage in low use.
+- Surface Flinger Tweaks reworked and now is better.
+- Memory Management tweaks (now system cache is better);
+- I/O tweaks for better storage speed;
+- Enabled power efficient workqueue;
+- Fixed scripts that arent working.
+- Some Build Prop tweaks.
+
+=== LhMods v1.1
+- Removed some useless things;
+- Added surface flinger tweaks;
+- Added SFAnalysis tweak to better smoothness and battery backup;
+- Disabled qualcoom and mediatek perfhal for better performance;
+- Disabled MIUI/HyperOS thermald (the system thermal is used now);
+- Disabled some performance counter;
+- Re-enabled LMK.
+- Some memory management Tweaks.
+- Disabled the powerchecker in MIUI/HyperOS for better RAM Management. This service kills some Apps in background.
+
+==== LHMods v1.0 ====
+
+- Initial Release 1.0;
+- SQlite included and tweaked;
+- Some Android Logging and debug disabled;
+- Dalvik Tweaks to make apps run faster and smoother;
+- Build.prop tweaked for better battery, experience and performance;
+- Virtual Memory tweaked;
+- GMS Tweaks to better battery and free RAM;
+- Disable MIUI/HyperOS logs;
+- Better Battery with Adreno GPUs;
+- CPU-SET Tweaks to make battery better;
+- Some kernel tweaks;
+- Enabled power efficient workqueues;
+
+Enjoy the better experience!
