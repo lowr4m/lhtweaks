@@ -4,10 +4,18 @@ LHMods v1.0
  ===================
  - if you are using some GMS tweaker module or SQLite,
 please remove it, to avoid problems. Its recommended
-to NOT use much performance modules
+to NOT use much performance modules
+
 ====================
 
 CHANGELOGS:
+
+=== LHTweaker Pre-1.3
+- Name of the module changeg to LHTweaker;
+- Can be update directly from 1.2.5;
+- Just some adjustments in memory management;
+- Timer migration is disabled again;
+- SQLite updated to latest version.
 
 === LHMods 1.2.5
 - Scripts now is more clean and apply faster;
@@ -23,7 +31,8 @@ CHANGELOGS:
 - Memory Management tweaks (now system cache is better);
 - I/O tweaks for better storage speed;
 - Enabled power efficient workqueue;
-- Fixed scripts that arent working.
+- Fixed scripts that arent working.
+
 - Some Build Prop tweaks.
 
 === LhMods v1.1

@@ -125,14 +125,6 @@ init_main() {
   
   ui_print ""
   sleep 1
-
-  ui_print "----------------------------------"
-  ui_print "█▀▄ █▀█ █▄░█ █▀▀"
-  ui_print "█▄▀ █▄█ █░▀█ ██▄"
-  ui_print "----------------------------------"
-  
-  ui_print ""
-  sleep 1
   
   SCRIPT_PARENT_PATH="$MODPATH/script"
   SCRIPT_NAME="Tweaks.sh"
@@ -145,14 +137,6 @@ init_main() {
 
   ui_print ""
   sleep 1
-
-  ui_print "----------------------------------"
-  ui_print "█▄░█ █▀█ ▀█▀ █▀▀ █▀"
-  ui_print "█░▀█ █▄█ ░█░ ██▄ ▄█"
-  ui_print "----------------------------------"
-  ui_print ""
-  ui_print "❗ Reboot is required"
-  sleep 1.25
 
   ui_print "----------------------------------"
   ui_print "█▀█ █▀▀ █▄▄ █▀█ █▀█ ▀█▀"
