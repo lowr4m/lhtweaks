@@ -171,7 +171,7 @@ chmod 0444 /sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/max_freq
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "       SQLITE3 INSTALLER       "
+  ui_print "       SQLite3 Installer       "
   ui_print "*******************************"
 }
 
