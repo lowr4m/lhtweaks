@@ -6,12 +6,13 @@ MG=/sys/kernel/mm
 
 sleep 10
 #==========
-# Disable timer migration
+# Kernel Tweaks
 #==========
 
 for kernel in proc/sys/kernel
 	do
 	echo '0' > ${kernel}/timer_migration
+ acho '0' > ${kernel}/ftrace_dump_on_oops
 done
 
 #==========
