@@ -2,6 +2,7 @@
 ######################################
 
 # Disable Logs and Debugging
+debugtool.anrhistory=0
 logcat.live=disable
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
@@ -11,23 +12,19 @@ ro.config.nocheckin=1
 ro.com.google.locationfeatures=0
 ro.com.google.networklocation=0
 media.metrics.enabled=0
-logd.statistics=0
 media.metrics=0
 persist.sys.loglevel=0
 sys.log.app=0
 persist.traced.enable=0
-logd.statistics=0
 profiler.debugmonitor=false
 profiler.launch=false
 profiler.hung.dumpdobugreport=false
+logd.statistics=0
 debug.mdpcomp.logs=0
 ro.logd.size.stats=0
 debug.atrace.tags.enableflags=0
 spersist.service.pcsync.enable=0
 persist.service.lgospd.enable=0
-dalvik.vm.checkjni=false
-dalvik.vm.minidebuginfo=true
-dalvik.vm.dex2oat-minidebuginfo=true
 
 # Battery
 wifi.supplicant_scan_interval=750
@@ -44,10 +41,18 @@ debug.sf.enable_hwc_vds=1
 ebug.gralloc.enable_fb_ubwc=1
 debug.sf.latch_unsignaled=1
 debug.sf.recomputecrop=0
+persist.sys.use_16bpp_alpha=1
 
 # Disable tracing
 persist.traced_perf.enable=0
 persist.traced.enable=0
+ro.secure=0
+
+# Dalvik
+dalvik.vm.checkjni=false
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.dex2oat-minidebuginfo=true
+dalvik.vm.minidebuginfo=true
 
  
 

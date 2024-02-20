@@ -11,7 +11,7 @@ sleep 10
 
 for kernel in proc/sys/kernel
 	do
-	echo '0' > ${kernel}/timer_migration
+	echo '1' > ${kernel}/timer_migration
 	echo '0' > ${kernel}/ftrace_dump_on_oops
 done
 
