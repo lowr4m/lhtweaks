@@ -210,6 +210,13 @@ echo "VACUUM;" | sqlite3 database.db
 stop vendor.perfservice
 stop miuibooster
 stop vendor.miperf
+
+#==========
+# Perfd and thermald
+#==========
+
+stop perfd
+stop mi_thermald
 	
 #==========
 
