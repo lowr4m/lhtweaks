@@ -1,33 +1,49 @@
 # This file will be read by resetprop=
 ######################################
 
-# Disable Logs and Debugging
+# Disable logging and debugging
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+ro.config.htc.nocheckin=1
+logcat.live=disable
+ro.config.nocheckin=1
+dalvik.vm.check-dex-sum=false
+dalvik.vm.checkjni=false
+dalvik.vm.verify-bytecode=false
+debug.atrace.tags.enableflags=0
+ro.config.dmverity=false
+ro.dalvik.vm.native.bridge=0
+debug.mdpcomp.logs=0
 debugtool.anrhistory=0
 logcat.live=disable
+persist.brcm.ap_crash=none
+persist.brcm.cp_crash=none
+persist.brcm.log=none
+persist.radio.adb_log_on=0
+persist.sys.qc.sub.rdump.on=0
+profiler.debugmonitor=false
 profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
-ro.kernel.checkjni=0
-ro.kernel.android.checkjni=0
-ro.config.nocheckin=1
+profiler.hung.dumpdobugreport=false
+profiler.launch=false
+persist.ims.disableDebugLogs=1
+
+# DIsable some useless
+persist.sys.strict_op_enable=false
+persist.sys.strictmode.disable=1
+persist.sys.strictmode.visual=false
+ro.secure=0
+security.perf_harden=0
+
+# Disable locating
 ro.com.google.locationfeatures=0
 ro.com.google.networklocation=0
-media.metrics.enabled=0
-media.metrics=0
-persist.sys.loglevel=0
-sys.log.app=0
-persist.traced.enable=0
-profiler.debugmonitor=false
-profiler.launch=false
-profiler.hung.dumpdobugreport=false
-logd.statistics=0
-debug.mdpcomp.logs=0
-ro.logd.size.stats=0
-debug.atrace.tags.enableflags=0
-spersist.service.pcsync.enable=0
-persist.service.lgospd.enable=0
 
 # Battery
 wifi.supplicant_scan_interval=750
+pm.sleep_mode=1
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
 
 # Disable LMK debugging
 persist.sys.lmk.reportkills=false
@@ -41,16 +57,13 @@ debug.sf.enable_hwc_vds=1
 ebug.gralloc.enable_fb_ubwc=1
 debug.sf.latch_unsignaled=1
 debug.sf.recomputecrop=0
-persist.sys.use_16bpp_alpha=1
 
 # Disable tracing
 persist.traced_perf.enable=0
 persist.traced.enable=0
-ro.secure=0
 
 # Dalvik
 dalvik.vm.checkjni=false
-dalvik.vm.execution-mode=int:jit
 dalvik.vm.dex2oat-minidebuginfo=true
 dalvik.vm.minidebuginfo=true
 

@@ -9,12 +9,6 @@ sleep 10
 # Kernel Tweaks
 #==========
 
-for kernel in proc/sys/kernel
-	do
-	echo '1' > ${kernel}/timer_migration
-	echo '0' > ${kernel}/ftrace_dump_on_oops
-done
-
 #==========
 # Kernel Panic
 #==========
@@ -96,8 +90,8 @@ for queue in /sys/block/*/queue
 	echo '0' > ${queue}/iostats
 	echo '0' > ${queue}/rq_affinity
 	echo '2' > ${queue}/nomerges
-	echo '128' > ${queue}/read_ahead_kb
-	echo '64' > ${queue}/nr_requests
+	echo '256' > ${queue}/read_ahead_kb
+	echo '128' > ${queue}/nr_requests
 done
 
 #==========
@@ -114,8 +108,7 @@ for gpu in /sys/class/kgsl/kgsl-3d0
     echo "0" > ${gpu}/force_bus_on
     echo "1" > ${gpu}/bus_split  
     echo "0" > ${gpu}/force_no_nap
-    echo "0" > ${gpu}/force_rail_on 
-    echo "80" > ${gpu}/idle_timer
+    echo "0" > ${gpu}/force_rail_on
 	echo "0" > ${gpu}/snapshot/snapshot_crashdumper
 done
 
@@ -155,7 +148,7 @@ done
 for VM in /proc/sys/vm
 	do
 	echo '60' > $VM/dirty_ratio
-	echo '5' > $VM/dirty_background_ratio
+	echo '10' > $VM/dirty_background_ratio
 	echo '1000' > $VM/dirty_expire_centisecs
 	echo '3000' > $VM/dirty_writeback_centisecs
 	echo '0' > $VM/page-cluster
