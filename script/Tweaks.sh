@@ -11,8 +11,8 @@ sleep 10
 
 for kernel in proc/sys/kernel
 	do
-echo '1' > ${kernel}/timer_migration
-echo '0' > ${kernel}/ftrace_dump_on_oops
+	echo '0' > ${kernel}/timer_migration
+	echo '0' > ${kernel}/ftrace_dump_on_oops
 done
 
 #==========
@@ -97,7 +97,7 @@ for queue in /sys/block/*/queue
 	echo '0' > ${queue}/rq_affinity
 	echo '2' > ${queue}/nomerges
 	echo '128' > ${queue}/read_ahead_kb
-	echo '32' > ${queue}/nr_requests
+	echo '64' > ${queue}/nr_requests
 done
 
 #==========
