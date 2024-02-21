@@ -129,16 +129,14 @@ done
 
 for cpu in /dev/cpuset
 	do
-	echo "0-1" > ${cpu}/background/cpus
-	echo "0-1" > ${cpu}/background/effective_cpus
+	echo "0-3" > ${cpu}/background/cpus
+	echo "0-3" > ${cpu}/background/effective_cpus
 	echo "0-3" > ${cpu}/system-background/cpus
 	echo "0-3" > ${cpu}/system-background/effective_cpus
-	echo "0-7" > ${cpu}/camera-daemon/cpus
-	echo "0-7" > ${cpu}/camera-daemon/effective_cpus
 	echo "0-1" > ${cpu}/audio-app/cpus
 	echo "0-7" > ${cpu}/top-app/cpus
 	echo "0-7" > ${cpu}/top-app/effective_cpus
-	echo "0-3" > ${cpu}/foreground/boost/cpus
+	echo "0-6" > ${cpu}/foreground/boost/cpus
 done
 
 #==========
