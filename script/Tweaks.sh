@@ -90,7 +90,7 @@ for queue in /sys/block/*/queue
 	echo '0' > ${queue}/iostats
 	echo '0' > ${queue}/rq_affinity
 	echo '2' > ${queue}/nomerges
-	echo '256' > ${queue}/read_ahead_kb
+	echo '128' > ${queue}/read_ahead_kb
 	echo '32' > ${queue}/nr_requests
 done
 
